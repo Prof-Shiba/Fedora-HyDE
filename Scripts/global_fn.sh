@@ -48,7 +48,7 @@ chk_list() {
 pkg_available() {
     local PkgIn=$1
 
-    if ${pacmanCmd} query "${PkgIn}" &>/dev/null; then
+    if dnf info "${PkgIn}" &>/dev/null; then
         return 0
     else
         return 1
