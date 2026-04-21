@@ -70,8 +70,9 @@ Check this out for the full note:
 WARNING: THIS IS A WIP AND DOES NOT FULLY WORK YET. DO NOT RUN THIS YET EXCEPT ON A VM. I AM STILL DEVELOPING IT ACTIVELY.
 ---
 
-The installation script is designed for a minimal [Fedora 43 Linux](https://wiki.archlinux.org/title/Arch_Linux) install, it **should** work on all [Fedora distros](https://wiki.archlinux.org/title/Arch-based_distributions).
+The installation script is designed for a minimal [Fedora 43 Linux](https://fedoraproject.org/) install, it **should** work on all Fedora distros.
 While installing HyDE alongside another [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) should work, due to it being a heavily customized setup, it **will** conflict with your [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) theming, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), etc. and is at your own risk.
+Be especially careful when using KDE plasma, it **WILL** cause themeing conflicts.
 
 For NixOS support there is a separate project being maintained @ [Hydenix](https://github.com/richen604/hydenix/tree/main)
 
