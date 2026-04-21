@@ -84,9 +84,9 @@ For NixOS support there is a separate project being maintained @ [Hydenix](https
 To install, execute the following commands:
 
 ```shell
-sudo dnf install git
-git clone --depth 1 https://github.com/Prof-Shiba/HyDE_Fedora ~/HyDE_Fedora
-cd ~/HyDE_Fedora/Scripts
+sudo dnf install git @development-tools @c-development
+git clone --depth 1 https://github.com/Prof-Shiba/Fedora-HyDE ~/Fedora-HyDE
+cd ~/Fedora-HyDE/Scripts
 ./install.sh
 ```
 
