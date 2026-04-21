@@ -78,7 +78,7 @@ install_packages() {
     local install_cmd=$3
 
     if [[ ${#pkg_array[@]} -gt 0 ]]; then
-        print_log -b "[install] " "$pkg_type packages..."
+        print_log -b "[install] " "Fedora packages..."
         if [ "${flg_DryRun}" -eq 1 ]; then
             for pkg in "${pkg_array[@]}"; do
                 print_log -b "[pkg] " "${pkg}"
@@ -90,6 +90,6 @@ install_packages() {
 }
 
 echo ""
-install_packages archPkg "arch" "sudo pacman"
+install_packages archPkg "arch" "sudo dnf"
 echo ""
 install_packages aurhPkg "aur" "${aurhlpr}"
