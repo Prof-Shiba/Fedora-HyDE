@@ -80,9 +80,9 @@ HyDE 是一个高度自定义的预设，在其他[桌面环境](https://wiki.ar
 若要安装，请执行以下命令：
 
 ```shell
-pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+sudo dnf install git @development-tools @c-development
+git clone --depth 1 https://github.com/Prof-Shiba/Fedora-HyDE ~/Fedora-HyDE
+cd ~/Fedora-HyDE/Scripts
 ./install.sh
 ```
 

@@ -75,9 +75,9 @@ Für die Unterstützung von NixOS gibt es ein eigenes Projekt, das unter [Hydeni
 Führen Sie zur Installation die folgenden Befehle aus:
 
 ```shell
-pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+sudo dnf install git @development-tools @c-development
+git clone --depth 1 https://github.com/Prof-Shiba/Fedora-HyDE ~/Fedora-HyDE
+cd ~/Fedora-HyDE/Scripts
 ./install.sh
 ```
 

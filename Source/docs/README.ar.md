@@ -74,9 +74,9 @@ Multi-language README support
 لتثبيت HyDE، قم بتنفيذ الأوامر التالية:
 
 ```shell
-pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+sudo dnf install git @development-tools @c-development
+git clone --depth 1 https://github.com/Prof-Shiba/Fedora-HyDE ~/Fedora-HyDE
+cd ~/Fedora-HyDE/Scripts
 ./install.sh
 ```
 

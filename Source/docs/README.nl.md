@@ -69,9 +69,9 @@ Voor NixOS-ondersteuning is er een apart project dat wordt onderhouden op [Hyden
 Om te installeren, voer de volgende commando's uit:
 
 ```shell
-pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+sudo dnf install git @development-tools @c-development
+git clone --depth 1 https://github.com/Prof-Shiba/Fedora-HyDE ~/Fedora-HyDE
+cd ~/Fedora-HyDE/Scripts
 ./install.sh
 ```
 

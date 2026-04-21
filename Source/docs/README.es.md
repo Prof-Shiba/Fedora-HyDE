@@ -85,9 +85,9 @@ Para soporte en NixOS hay un proyecto separado que se mantiene en [Hydenix](http
 Para instalar, ejecute los siguientes comandos:
 
 ```shell
-sudo pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+sudo dnf install git @development-tools @c-development
+git clone --depth 1 https://github.com/Prof-Shiba/Fedora-HyDE ~/Fedora-HyDE
+cd ~/Fedora-HyDE/Scripts
 ./install.sh
 ```
 
