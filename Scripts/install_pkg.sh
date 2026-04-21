@@ -15,11 +15,11 @@ fi
 flg_DryRun=${flg_DryRun:-0}
 export log_section="package"
 
-"${scrDir}/install_aur.sh" "${getAur}" 2>&1
-chk_list "aurhlpr" "${aurList[@]}"
+# "${scrDir}/install_aur.sh" "${getAur}" 2>&1
+# chk_list "aurhlpr" "${aurList[@]}"
 listPkg="${1:-"${scrDir}/pkg_core.lst"}"
 archPkg=()
-aurhPkg=()
+# aurhPkg=()
 ofs=$IFS
 IFS='|'
 
@@ -62,9 +62,9 @@ while read -r pkg deps; do
         repo=$(pacman -Si "${pkg}" | awk -F ': ' '/Repository / {print $2}' | tr '\n' ' ')
         print_log -b "[queue] " "${pkg}" -b " :: " -g "${repo}"
         archPkg+=("${pkg}")
-    elif aur_available "${pkg}"; then
-        print_log -b "[queue] " "${pkg}" -b " :: " -g "aur"
-        aurhPkg+=("${pkg}")
+    # elif aur_available "${pkg}"; then
+    #     print_log -b "[queue] " "${pkg}" -b " :: " -g "aur"
+    #     aurhPkg+=("${pkg}")
     else
         print_log -r "[error] " "unknown package ${pkg}..."
     fi
@@ -92,4 +92,4 @@ install_packages() {
 echo ""
 install_packages archPkg "arch" "sudo dnf"
 echo ""
-install_packages aurhPkg "aur" "${aurhlpr}"
+# install_packages aurhPkg "aur" "${aurhlpr}"
