@@ -86,12 +86,11 @@ $HOME/.local/share/themes               # remove fonts from here
 $HOME/.icons                            # remove icons from here
 $HOME/.themes                           # remove themes from here
 
-Revert back bootloader/pacman/sddm settings manually from these backups
+Revert back bootloader/sddm settings manually from these backups
 /boot/loader/entries/*.conf.hyde.bkp    # restore systemd-boot from this backup
 /etc/default/grub.hyde.bkp              # restore grub from this backup
 /boot/grub/grub.hyde.bkp                # restore grub from this backup
 /usr/share/grub/themes                  # remove grub themes from here
-/etc/pacman.conf.hyde.bkp               # restore pacman from this backup
 /etc/sddm.conf.d/kde_settings.hyde.bkp  # restore sddm from this backup
 /usr/share/sddm/themes                  # remove sddm themes from here
 
