@@ -33,6 +33,7 @@ if pkg_installed grub && [ -f /boot/grub/grub.cfg ]; then
             fi
         fi
 
+        print_log -g "WARNING: Custom Grub themes may conflict with secure boot on Fedora. If unsure if you need secure boot, simply skip this portion."
         print_log -g "[bootloader] " "Select grub theme:" -y "\n[1]" -y " Retroboot (dark)" -y "\n[2]" -y " Pochita (light)"
         read -r -p " :: Press enter to skip grub theme <or> Enter option number : " grubopt
         case ${grubopt} in
