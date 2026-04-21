@@ -14,6 +14,17 @@ fi
 
 flg_DryRun=${flg_DryRun:-0}
 
+# COPR
+ echo "Installing COPR repos for hyprland, nwg-shell, fonts, and VSCode"
+ sudo dnf copr enable solopasha/hyprland
+ sudo dnf copr enable tofik/nwg-shell
+ sudo dnf install \
+  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+ sudo dnf makecache
+
 # grub
 if pkg_installed grub && [ -f /boot/grub/grub.cfg ]; then
     print_log -sec "bootloader" -b "detected :: " "grub..."
