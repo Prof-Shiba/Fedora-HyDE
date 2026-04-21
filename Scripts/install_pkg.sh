@@ -59,7 +59,7 @@ while read -r pkg deps; do
     if pkg_installed "${pkg}"; then
         print_log -y "[skip] " "${pkg}"
     elif pkg_available "${pkg}"; then
-        repo=$(pacman -Si "${pkg}" | awk -F ': ' '/Repository / {print $2}' | tr '\n' ' ')
+        repo=$(dnf info "${pkg}" 2>/dev/null | awk -F ': ' '/From repo / {print $2}')
         print_log -b "[queue] " "${pkg}" -b " :: " -g "${repo}"
         archPkg+=("${pkg}")
     # elif aur_available "${pkg}"; then
@@ -79,12 +79,14 @@ install_packages() {
 
     if [[ ${#pkg_array[@]} -gt 0 ]]; then
         print_log -b "[install] " "Fedora packages..."
+        sudo dnf update -y
+        sudo dnf makecache
         if [ "${flg_DryRun}" -eq 1 ]; then
             for pkg in "${pkg_array[@]}"; do
                 print_log -b "[pkg] " "${pkg}"
             done
         else
-            $install_cmd ${use_default:+"$use_default"} -S "${pkg_array[@]}"
+            sudo dnf install "${pkg_array[@]}"
         fi
     fi
 }
