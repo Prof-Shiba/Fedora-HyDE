@@ -7,3 +7,5 @@ install_pkg.lst
 restore_fnt
 restore_cfg
 restore_thm
+
+I will slowly go through every file and remove everything that I can without breaking the dots (all aur related items, pacman, etc).
