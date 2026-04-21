@@ -1,0 +1,9 @@
+TODO IF NEEDED:
+Update install.sh
+pkg_user.lst
+pkg_extra.lst
+install_pkg.lst
+
+restore_fnt
+restore_cfg
+restore_thm
