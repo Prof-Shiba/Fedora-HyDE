@@ -21,8 +21,9 @@ export shlList
 
 pkg_installed() {
     local PkgIn=$1
-
-    if pacman -Q "${PkgIn}" &>/dev/null; then
+    # RPM here is more similar to pacman and wont throw errors
+    # unlike dnf with unresponsives COPR repos
+    if rpm -q "${PkgIn}" &>/dev/null; then
         return 0
     else
         return 1
