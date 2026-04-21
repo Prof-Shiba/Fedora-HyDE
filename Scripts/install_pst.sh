@@ -14,7 +14,8 @@ fi
 cloneDir="${cloneDir:-$CLONE_DIR}"
 flg_DryRun=${flg_DryRun:-0}
 
-# sddm
+# WARN: sddm - I may need to remove this on fedora or do extra. The themes typically don't work
+# as easily as on arch.
 if pkg_installed sddm; then
     print_log -c "[DISPLAYMANAGER] " -b "detected :: " "sddm"
     if [ ! -d /etc/sddm.conf.d ]; then
