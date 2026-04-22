@@ -1,11 +1,5 @@
-TODO IF NEEDED:
-Update install.sh
-pkg_user.lst
-pkg_extra.lst
-install_pkg.lst
-
-restore_fnt
-restore_cfg
-restore_thm
+TODO:
+For some reason swapping themes doesn't auto apply icons or cursors, must hydectl reload for that.
+Some stuff like shaders, wallbash.dcol for vscode etc don't exist and work on their own.
 
 I will slowly go through every file and remove everything that I can without breaking the dots (all aur related items, pacman, etc).
