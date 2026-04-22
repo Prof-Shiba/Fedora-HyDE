@@ -2,4 +2,6 @@ TODO:
 For some reason swapping themes doesn't auto apply icons or cursors, must hydectl reload for that.
 Some stuff like shaders, wallbash.dcol for vscode etc don't exist and work on their own.
 
+After everything is fixed and it 100% works, I will clean up the code I added and make everything actually readable. Also add pokemon colorscripts.
+
 I will slowly go through every file and remove everything that I can without breaking the dots (all aur related items, pacman, etc).
