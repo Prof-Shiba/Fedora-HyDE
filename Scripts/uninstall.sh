@@ -88,11 +88,11 @@ $HOME/.themes                           # remove themes from here
 
 Revert back bootloader/sddm settings manually from these backups
 /boot/loader/entries/*.conf.hyde.bkp    # restore systemd-boot from this backup
-/etc/default/grub.hyde.bkp              # restore grub from this backup
-/boot/grub/grub.hyde.bkp                # restore grub from this backup
-/usr/share/grub/themes                  # remove grub themes from here
-/etc/sddm.conf.d/kde_settings.hyde.bkp  # restore sddm from this backup
-/usr/share/sddm/themes                  # remove sddm themes from here
+# /etc/default/grub.hyde.bkp              # restore grub from this backup
+# /boot/grub/grub.hyde.bkp                # restore grub from this backup
+# /usr/share/grub/themes                  # remove grub themes from here
+# /etc/sddm.conf.d/kde_settings.hyde.bkp  # restore sddm from this backup
+# /usr/share/sddm/themes                  # remove sddm themes from here
 
 Uninstall the packages manually that are no longer required based on these list
 ${scrDir}/pkg_core.lst
