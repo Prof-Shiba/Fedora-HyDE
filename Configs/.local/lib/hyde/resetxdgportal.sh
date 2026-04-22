@@ -7,7 +7,7 @@ sleep 1
 if [ -d /run/current-system/sw/libexec ]; then
     libDir=/run/current-system/sw/libexec
 else
-    libDir=/usr/lib
+    libDir=/usr/libexec
 fi
 app2unit.sh -t service $libDir/xdg-desktop-portal-hyprland
 sleep 1
