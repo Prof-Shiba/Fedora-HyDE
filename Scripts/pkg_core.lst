@@ -85,5 +85,3 @@ fastfetch                                              # system information fetc
 # --------------------------------------------------- // HyDE
 # hyprquery                                            # A CLI utility for querying configuration values from hypr-related configuration. Using native hyprlang lib. NOTE: Not being found
 hypridle                                               # idle daemon
-cmake                                                  # this is for manual compilation of hyprquery
-hyprutils-devel                                        # needed for building hyprquery
