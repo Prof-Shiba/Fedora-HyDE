@@ -4,7 +4,7 @@ pipewire                                               # audio/video server
 pipewire-alsa                                          # pipewire alsa client
 # pipewire-audio                                       # pipewire audio client - should be covered by pipewire itself
 pipewire-jack-audio-connection-kit                     # pipewire jack client
-pipewire-pulse                                         # pipewire pulseaudio client
+# pipewire-pulse                                       # pipewire pulseaudio client - i think this comes with fedora
 pipewire-gstreamer                                     # pipewire gstreamer client
 wireplumber                                            # pipewire session manager
 pavucontrol                                            # pulseaudio volume control
@@ -53,7 +53,7 @@ qt5-qtimageformats                                     # for dolphin image thumb
 ffmpegthumbs                                           # for dolphin video thumbnails
 kde-cli-tools                                          # for dolphin file type defaults
 libnotify                                              # for notifications
-google-noto-color-fonts-emoji                          # emoji font
+google-noto-color-fonts-emoji                          # emoji font - FIXME: this isnt being found
 
 # --------------------------------------------------- // Theming
 nwg-look                                               # gtk configuration tool
@@ -70,7 +70,7 @@ kitty                                                  # terminal
 dolphin                                                # kde file manager
 ark                                                    # kde file archiver
 unzip                                                  # extracting zip files
-vim                                                    # terminal text editor
+vim                                                    # terminal text editor - this is not being found in fedora unless manually dnf searched
 code                                                   # ide text editor
 nwg-displays                                           # monitor management utility
 fzf                                                    # Command-line fuzzy finder
@@ -83,5 +83,5 @@ starship|fish                                          # customizable shell prom
 fastfetch                                              # system information fetch tool
 
 # --------------------------------------------------- // HyDE
-hyprquery                                              # A CLI utility for querying configuration values from hypr-related configuration. Using native hyprlang lib.
+# hyprquery                                              # A CLI utility for querying configuration values from hypr-related configuration. Using native hyprlang lib. NOTE: Not being found
 hypridle                                               # idle daemon
