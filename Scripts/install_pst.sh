@@ -84,3 +84,6 @@ if ! pkg_installed flatpak; then
 else
     print_log -y "[FLATPAK]" -b " :: " "flatpak is already installed"
 fi
+
+echo "Band aid fix: linking libhyprutils.so and libhyprutils.so.10"
+sudo ln -s /usr/lib/libhyprutils.so /usr/lib/libhyprutils.so.10 
