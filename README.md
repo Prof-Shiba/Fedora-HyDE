@@ -66,20 +66,13 @@ Check this out for the full note:
 <a id="installation"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=INSTALLATION" width="450"/>
 
----
-WARNING: THIS IS A WIP AND DOES NOT FULLY WORK YET. DO NOT RUN THIS YET EXCEPT ON A VM. I AM STILL DEVELOPING IT ACTIVELY.
----
-
-The installation script is designed for a minimal [Fedora 43 Linux](https://fedoraproject.org/) install, it **should** work on all Fedora distros.
+The installation script is designed for a regular [Fedora 43 Linux](https://fedoraproject.org/) install, it is tested extensively on both Fedora Workstation and Fedora KDE Plasma.
 While installing HyDE alongside another [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) should work, due to it being a heavily customized setup, it **will** conflict with your [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) theming, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), etc. and is at your own risk.
-Be especially careful when using KDE plasma, it **WILL** cause themeing conflicts.
+Be especially careful when using KDE plasma, it **WILL** cause themeing conflicts. You can mostly get around these with startup scripts in KDE that set the theme on launch.
 
 For NixOS support there is a separate project being maintained @ [Hydenix](https://github.com/richen604/hydenix/tree/main)
 
-> [!IMPORTANT]
-> The install script will auto-detect an NVIDIA card and install nvidia-open-dkms drivers for your kernel.
-> For legacy cards [check this first](./Scripts/nvidia-db/)
-> Please ensure that your NVIDIA card supports dkms drivers in the list provided [here](https://wiki.archlinux.org/title/NVIDIA).
+There is, of course, the main Arch repo as well @ [HyDE Project](https://github.com/HyDE-Project/HyDE)
 
 > [!CAUTION]
 > The script modifies your `grub` or `systemd-boot` config to enable NVIDIA DRM.
@@ -110,7 +103,7 @@ As a second install option, you can also use `Hyde-install`, which might be easi
 View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com/kRHYME7/Hyde-cli?tab=readme-ov-file#usage).
 -->
 
-Please reboot after the install script completes and takes you to the SDDM login screen (or black screen) for the first time.
+Please reboot after the install script completes and takes you to the SDDM or GDM login screen.
 For more details, please refer to the [installation wiki](https://github.com/HyDE-Project/HyDE/wiki/installation).
 
 <div align="right">
@@ -153,7 +146,7 @@ To update HyDE, you will need to pull the latest changes from GitHub and restore
 > The following commands will discard any uncommitted local changes in the repository.
 
 ```shell
-cd ~/HyDE/Scripts
+cd ~/Fedora-HyDE/Scripts
 git fetch --update-shallow --depth 1 origin master
 git reset --hard origin/master
 ./install.sh -r
@@ -236,7 +229,7 @@ For more information, visit [HyDE-Project/hyde-themes](https://github.com/HyDE-P
 </div>
 
 > [!TIP]
-> Everyone, including you can create, maintain, and share additional themes, all of which can be installed using themepatcher!
+> Everyone, including you, can create, maintain, and share additional themes, all of which can be installed using themepatcher!
 > To create your own custom theme, please refer to the [theming wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming).
 > If you wish to have your hyde theme showcased, or you want to find some non-official themes, visit [kRHYME7/hyde-gallery](https://github.com/kRHYME7/hyde-gallery)!
 
