@@ -23,6 +23,9 @@ sudo dnf install rust cargo clang libxkbcommon-devel pango-devel lz4-devel
 sudo dnf install pipx
 echo "Installing hyprshade..."
 pipx install hyprshade
+mkdir -p ~/.config/hypr/shaders
+# move the shaders into the right place
+cp ~/.local/share/pipx/venvs/hyprshade/share/hyprshade/shaders/* ~/.config/hypr/shaders/
 
 #hypr deps
 echo "Installing COPR repos for hyprland, nwg-shell, fonts, and VSCode"
