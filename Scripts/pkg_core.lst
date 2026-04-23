@@ -29,7 +29,7 @@ hyprland                                               # wlroots-based wayland c
 dunst                                                  # notification daemon
 rofi                                                   # application launcher - possibly need rofi-wayland
 waybar                                                 # system bar
-swww                                                   # wallpaper - may need to swap back to swww, but it was awww originally due to new updates
+#swww                                                  # wallpaper - may need to swap back to swww, but it was awww originally due to new updates
 hyprlock                                               # lock screen
 wlogout                                                # logout menu
 grim                                                   # screenshot tool
