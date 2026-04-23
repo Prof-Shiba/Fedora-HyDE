@@ -66,7 +66,7 @@ Check this out for the full note:
 <a id="installation"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=INSTALLATION" width="450"/>
 
-The installation script is designed for a regular [Fedora 43 Linux](https://fedoraproject.org/) install, it is tested extensively on both Fedora Workstation and Fedora KDE Plasma.
+The installation script is designed for a regular [Fedora 43 Linux](https://fedoraproject.org/) install. It is tested extensively on both Fedora Workstation and Fedora KDE Plasma.
 While installing HyDE alongside another [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) should work, due to it being a heavily customized setup, it **will** conflict with your [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) theming, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), etc. and is at your own risk.
 Be especially careful when using KDE plasma, it **WILL** cause themeing conflicts. You can mostly get around these with startup scripts in KDE that set the theme on launch.
 
