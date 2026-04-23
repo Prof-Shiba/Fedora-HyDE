@@ -56,7 +56,7 @@ cmake ..
 make -j$(nproc)
 cd ..;cd bin
 sudo cp hyq /usr/local/bin
-cd ..;cd..
+cd && cd ~/Fedora-HyDE/Scripts/
 
 sudo dnf makecache
 
