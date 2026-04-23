@@ -16,7 +16,7 @@ flg_DryRun=${flg_DryRun:-0}
 
 # Needed packages prior to install
 echo "Installing dependencies..."
-sudo dnf install cmake hyprutils-devel wayland-devel wayland-protocols-devel gcc python3-devel cairo-devel gobjectintrospection-devel pkgconf-pkg-config cairo-gobject-devel
+sudo dnf install cmake hyprutils-devel wayland-devel wayland-protocols-devel gcc python3-devel cairo-devel gobject-introspection-devel pkgconf-pkg-config cairo-gobject-devel
 sudo dnf install rust cargo clang libxkbcommon-devel pango-devel lz4-devel
 
 # for hyprshade
