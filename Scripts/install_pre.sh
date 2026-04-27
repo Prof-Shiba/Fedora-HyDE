@@ -55,7 +55,7 @@ cd hyprquery
 mkdir build;cd build
 cmake ..
 make -j$(nproc)
-cd ..;cd bin
+cd bin
 sudo cp hyq /usr/local/bin
 cd && cd ~/Fedora-HyDE/Scripts/
 
