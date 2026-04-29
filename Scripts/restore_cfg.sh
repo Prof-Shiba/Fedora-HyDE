@@ -357,6 +357,9 @@ echo ""
 hyprland_hook
 
 uv_hook
+# build env
+uv venv
+source .venv/bin/activate
 
 print_log -g "[python env]" -b " :: " "Rebuilding HyDE Python environment..."
 if command -v hyde-shell >/dev/null 2>&1; then
