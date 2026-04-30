@@ -14,51 +14,63 @@ fi
 
 flg_DryRun=${flg_DryRun:-0}
 
-# Needed packages prior to install
-echo "Installing dependencies..."
-sudo dnf install cmake hyprutils-devel wayland-devel wayland-protocols-devel gcc python3-devel cairo-devel gobject-introspection-devel pkgconf-pkg-config cairo-gobject-devel
-sudo dnf install rust cargo clang libxkbcommon-devel pango-devel lz4-devel
+install_fedora_dependencies() {
+    print_log -g "Installing dependencies..."
+    sudo dnf install cmake hyprutils-devel wayland-devel wayland-protocols-devel gcc python3-devel cairo-devel gobject-introspection-devel pkgconf-pkg-config cairo-gobject-devel rust cargo clang libxkbcommon-devel pango-devel lz4-devel
+}
 
-# for hyprshade
-sudo dnf install pipx
-echo "Installing hyprshade..."
-pipx install hyprshade
-mkdir -p ~/.config/hypr/shaders
+install_hyprshade() {
+    sudo dnf install pipx
+    print_log -g "Installing hyprshade..."
+    pipx install hyprshade
+    mkdir -p ~/.config/hypr/shaders
+}
 
-#hypr deps
-echo "Installing COPR repos for hyprland, nwg-shell, fonts, and VSCode"
-sudo dnf copr enable sdegler/hyprland
-sudo dnf copr enable tofik/nwg-shell
-sudo dnf copr enable atim/starship
+install_awww() {
+    git clone https://codeberg.org/LGFae/awww
+    cd awww
+    cargo build --release
+    sudo cp target/release/awww /usr/local/bin
+    sudo cp target/release/awww-daemon /usr/local/bin
+    cd ..
+}
+
+install_vscode() {
+    sudo dnf install \
+    https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+}
+
+install_hyprquery() {
+    print_log -g "Installing hyprquery..."
+    git clone https://github.com/HyDE-Project/hyprquery
+    cd hyprquery
+    mkdir build && cd build
+    cmake ..
+    make -j$(nproc)
+    cd bin
+    sudo cp hyq /usr/local/bin
+    cd && cd ~/Fedora-HyDE/Scripts/
+}
+
+install_copr() {
+    print_log -g "Installing COPR repos for hyprland, nwg-shell, fonts, and VSCode"
+    sudo dnf copr enable sdegler/hyprland
+    sudo dnf copr enable tofik/nwg-shell
+    sudo dnf copr enable atim/starship
+}
+
+install_fedora_dependencies
+install_copr
+install_vscode
+install_hyprshade
+# needed here in particular
 sudo dnf install hyprutils-devel swaylock-effects
-
-# awww
-git clone https://codeberg.org/LGFae/awww
-cd awww
-cargo build --release
-sudo cp target/release/awww /usr/local/bin
-sudo cp target/release/awww-daemon /usr/local/bin
-cd ..
-
-sudo dnf install \
-https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-# vs code
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
-# hyprquery
-echo "Installing hyprquery..."
-git clone https://github.com/HyDE-Project/hyprquery
-cd hyprquery
-mkdir build;cd build
-cmake ..
-make -j$(nproc)
-cd bin
-sudo cp hyq /usr/local/bin
-cd && cd ~/Fedora-HyDE/Scripts/
-
+install_awww
+install_hyprquery
 sudo dnf makecache
 
 # grub
