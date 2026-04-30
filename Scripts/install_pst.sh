@@ -87,3 +87,7 @@ fi
 
 echo "Band aid fix: linking libhyprutils.so and libhyprutils.so.6"
 sudo ln -s /usr/lib64/libhyprutils.so /usr/lib64/libhyprutils.so.6
+
+rm -rf ~/.local/state/hyde/python_env
+uv venv ~/.local/state/hyde/python_env
+uv pip install -U -r ~/.local/lib/hyde/pyproject.toml --python ~/.local/state/hyde/python_env/bin/python
