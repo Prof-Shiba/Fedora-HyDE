@@ -6,7 +6,7 @@ Thank you for your interest in contributing to Community Standards! We welcome a
 
 1. Fork this repository to your GitHub account. This will create a copy of this repository in your account. You can make changes to this copy without affecting the original repository.
 
-   - For fork this repository, click the **Fork** button in the top right corner of this page or click [here](https://github.com/HyDE-Project/HyDE/fork).
+   - For fork this repository, click the **Fork** button in the top right corner of this page or click [here](https://github.com/Prof-Shiba/Fedora-HyDE/fork).
 
 > [!NOTE]
 > For first-time contributors:** All new contributors should start by submitting pull requests. After demonstrating consistent high-quality contributions through PRs, you may be considered for a collaborator role as described in [TEAM_ROLES.md](https://github.com/HyDE-Project/HyDE/blob/master/TEAM_ROLES.md). Direct repository access is granted selectively based on contribution history.
@@ -16,7 +16,7 @@ Thank you for your interest in contributing to Community Standards! We welcome a
    - Use the following command to clone your forked repository to your local machine.
 
      ```bash
-     git clone https://github.com/HyDE-Project/HyDE.git
+     git clone https://github.com/Prof-Shiba/Fedora-HyDE.git
      ```
 
 3. Create a new branch for your changes.
@@ -41,7 +41,7 @@ Thank you for your interest in contributing to Community Standards! We welcome a
 - The existing entries should be used as a style guideline.
 - The change log should be used to document changes from a user-perspective, instead of explaining the technical background (like commit messages) More information about HyDE's change log format can be found [here](https://keepachangelog.com/).
 
-5.1. **Optional But Recommended: Test with HydeVM** - You can test your changes in a VM using [HydeVM](Scripts/hydevm/README.md) before submitting.
+5.1. **Optional But Recommended: Test with a VM** - You should test your changes in a VM before submitting. HyDEVM does not support Fedora, but qemu/virt-manager does.
 
 6. Push your changes to your forked repository.
 
@@ -82,4 +82,4 @@ Thank you for your interest in contributing to Community Standards! We welcome a
 
 ## Contact
 
-If you have any questions, feel free to contact via [GitHub Discussions](https://github.com/HyDE-Project/HyDE/discussions).
+If you have any questions, feel free to contact via [GitHub Discussions](https://github.com/Prof-Shiba/Fedora-HyDE/discussions).
